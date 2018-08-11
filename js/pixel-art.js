@@ -70,7 +70,6 @@ $(document).ready(function() {
 
   $('#resetGrid').click(function() {
     $('#pixelGrid div').each(function() {
-      // $(this).css('background-color', 'white');
       $(this).animate({
         backgroundColor: 'white'
       }, 2000);
@@ -118,14 +117,8 @@ $(document).ready(function() {
     $('#' + editedPixelID).css('background-color', lastUndoneEdit.postColor);
   }
 
-
-  // document.addEventListener('DOMContentLoaded', function () {
-  //   document.getElementById('palette').childNodes.forEach(node => addEventListener('click', activateColor));
-  // });
-
   function generatePalette() {
     var $palette = $('#palette');
-    // console.log(palette);
     colors.forEach(color => {
       var $newColor = $('<div></div>');
       $newColor.css('background-color', color);
@@ -183,10 +176,6 @@ $(document).ready(function() {
     } else undoObjectsList.push(element);
   }
 });
-
-/*
-I tried using a library to draw an image from a file into a canvas, then dividing it into the amount of cols and rows in the grid, to then get the predominant color in each pixel and draw the grid. The problem seems to be always dividing an image specifically in those many fractions. I'm sure there's a method to it, but right now this excedes me.
-*/
 
 // function loadImage() {
 //   var lineXArray = [60, 250];
